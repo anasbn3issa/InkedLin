@@ -29,8 +29,10 @@ function Home() {
       </header>
       <main className="flex flex-col xl:flex-row items-center max-w-screen-lg mx-auto">
         <div className="space-y-x xl:space-y-10">
-            <h1 className="text-3xl md:text-5xl text-amber-800/80 max-w-xl !leading-snug pl-4 xl:pl-0">Welcome to your InkedLin plateform</h1>
-            <div className="space-y-4">
+          <h1 className="text-3xl md:text-5xl text-amber-800/80 max-w-xl !leading-snug pl-4 xl:pl-0">
+            Welcome to your InkedLin plateform
+          </h1>
+          <div className="space-y-4">
             <div className="intent">
               <h2 className="text-xl">Search for a job</h2>
               <ArrowForwardIosRoundedIcon className="text-gray-700" />
@@ -44,6 +46,10 @@ function Home() {
               <ArrowForwardIosRoundedIcon className="text-gray-700" />
             </div>
           </div>
+        </div>
+
+        <div className="relative xl:absolute w-80 h-80 xl:w-[650px] xl:h-[650px] top-14 right-5">
+          <Image src="https://rb.gy/vkzpzt" layout="fill" priority />
         </div>
       </main>
     </div>
