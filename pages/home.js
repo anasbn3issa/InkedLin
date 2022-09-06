@@ -6,10 +6,18 @@ import OndemandVideoSharpIcon from "@mui/icons-material/OndemandVideoSharp";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import Head from "next/head";
-import { getProviders, signIn } from "next-auth/react";
+import { getProviders, signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 function Home({providers}) {
-  console.log(providers);
+
+  const router = useRouter();
+  const { data: session, status } = useSession({
+    required: true,
+    onUnauthenticated(){
+      router.push('/home');
+    }
+  });
   return (
     <div className="space-y-10 relative">
         <Head>
